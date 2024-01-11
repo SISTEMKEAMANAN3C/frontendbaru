@@ -34,3 +34,8 @@ $(function() {
         element.addClass('active');
     }
 });
+
+function RedirectLogin() {
+    // Ganti 'halaman-tujuan.html' dengan URL halaman yang ingin Anda tuju
+    window.location.href = 'login.html';
+}
