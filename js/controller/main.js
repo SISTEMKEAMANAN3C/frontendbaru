@@ -22,6 +22,13 @@ if (productTableBodyElement) {
     console.log("Element with ID 'productTableBody' not found. getDosen not executed.");
 }
 
+const inidetaildosenElement = document.getElementById('ini-detail-dosen');
+if (inidetaildosenElement) {
+    getDetailForm();
+} else {
+    console.log("Element with ID 'ini-detail-dosen' not found. getDetailForm not executed.");
+}
+
 const deleteElement = document.getElementById('ini-halaman-delete');
 if (deleteElement) {
     // value params
@@ -86,5 +93,5 @@ if (updateElement) {
     document.getElementById("update-keterangan-kerja").value = keterangan_kerja;
     document.getElementById("update-kuasa-kerja").value = kuasa_kerja;
 } else {
-    console.log("Element with ID 'ini-halaman-delete' not found.");
+    console.log("Element with ID 'ini-halaman-update' not found.");
 }

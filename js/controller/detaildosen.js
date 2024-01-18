@@ -1,21 +1,18 @@
 import { getCookie } from "./cookies.js";
-import { postHeader } from "./api.js";
-import { GetOneform } from "./gudangAPI.js";
-import { getValue } from "./element.js";
+import { getHeader } from "./api.js";
+import { AmbilSatuFormDosen } from "./gudangAPI.js";
+
 
 export default function getDetailForm() {
     let tokenkey = "token";
     let tokenvalue = getCookie("token");
-    let datainjson = {
-        "nik": getValue("detail-nik")
-    }
 
-    postHeader(GetOneform, datainjson, tokenkey, tokenvalue, responseData);
+    getHeader(AmbilSatuFormDosen, tokenkey, tokenvalue, responseData);
 }
 
 // Display products in the tabl3
 function responseData(products) {
-    const postContainer = document.getElementById('ini-detail-form');
+    const postContainer = document.getElementById('ini-detail-dosen');
     // Create a new div for each post
     const postDiv = document.createElement('div');
     postDiv.classList.add('post');

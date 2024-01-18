@@ -1,7 +1,7 @@
 import { postBiasa } from "./api.js";
 import { getValue } from "./element.js";
 import { setCookieWithExpireHour } from "./cookies.js";
-import { signinAdmin } from "./gudangAPI.js"
+import { LoginAPI } from "./gudangAPI.js"
 
 // const loadingIndicator = document.getElementById("loadingIndicator");
 // const loginButton = document.getElementById("btnLogin");
@@ -25,7 +25,7 @@ export default function LoginAdmin(){
     // loginButton.style.display = "none";
     // loadingIndicator.style.display = "block";
 
-    postBiasa(signinAdmin,datainjson,responseData);
+    postBiasa(LoginAPI,datainjson,responseData);
 
 }
 

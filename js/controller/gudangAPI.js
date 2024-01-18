@@ -1,10 +1,10 @@
-// export let APIRegistrasi = "https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/signup-1fancy";
+export let AuthorizationAPI = "http://localhost:8080/AuthorizationAPI"
+export let RegistrasiAPI = "http://localhost:8080/RegistrasiAPI"
+export let LoginAPI = "http://localhost:8080/LoginAPI"
 
-
-export let createDosenn = "http://localhost:8080/TambahFormAPI"
-export let GetAllform = "http://localhost:8080/GetAllform"
-export let GetOneform = "http://localhost:8080/GetOneform"
-export let HapusFormAPI = "http://localhost:8080/HapusFormAPI"
+export let TambahFormAPI = "http://localhost:8080/TambahFormAPI"
+export let AmbilSemuaFormAPI = "http://localhost:8080/AmbilSemuaFormAPI"
+export let AmbilSatuFormDosenAPI = "http://localhost:8080/AmbilSatuFormDosenAPI"
+export let AmbilSatuFormAdminAPI = "http://localhost:8080/AmbilSatuFormAdminAPI"
 export let UpdateFormAPI = "http://localhost:8080/UpdateFormAPI"
-
-export let signinAdmin = "http://localhost:8080/LoginAPI"
+export let HapusFormAPI = "http://localhost:8080/HapusFormAPI"

@@ -1,12 +1,12 @@
 import { getCookie } from "./cookies.js";
 import { getHeader } from "./api.js";
-import { GetAllform } from "./gudangAPI.js";
+import { AmbilSemuaFormAPI } from "./gudangAPI.js";
 
 export default function getDosen() {
     let tokenkey = "token";
     let tokenvalue = getCookie("token");
 
-    getHeader(GetAllform, tokenkey, tokenvalue, responseData);
+    getHeader(AmbilSemuaFormAPI, tokenkey, tokenvalue, responseData);
 }
 
 // Display products in the table
