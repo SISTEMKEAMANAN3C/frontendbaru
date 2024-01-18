@@ -74,6 +74,7 @@ export function get(target_url,responseFunction){
 
 export function getHeader(target_url,tokenkey,tokenvalue,responseFunction){
     var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
     myHeaders.append(tokenkey, tokenvalue);
     var requestOptions = {
     headers: myHeaders,

@@ -1,5 +1,5 @@
-import { getCookie } from "./js/cookies.js";
-import { patchHeader } from "./js/api.js";
+import { getCookie } from "./cookies.js";
+import { patchHeader } from "./api.js";
 // import { upadateDosenn } from "./js/gudangAPI.js";
 
 export default function editDosen(){

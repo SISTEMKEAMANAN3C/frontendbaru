@@ -1,7 +1,7 @@
-import { postHeader } from "./js/api.js";
-import { getValue } from "./js/element.js";
-import { createDosenn } from "./js/gudangAPI.js";
-import { getCookie } from "./js/cookies.js";
+import { postHeader } from "./api.js";
+import { getValue } from "./element.js";
+import { createDosenn } from "./gudangAPI.js";
+import { getCookie } from "./cookies.js";
 
 
 export default function createDosen(){

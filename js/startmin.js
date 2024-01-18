@@ -37,5 +37,5 @@ $(function() {
 
 function RedirectLogin() {
     // Ganti 'halaman-tujuan.html' dengan URL halaman yang ingin Anda tuju
-    window.location.href = 'index.html';
+    window.location.href = 'login.html';
 }

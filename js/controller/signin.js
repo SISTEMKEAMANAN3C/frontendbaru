@@ -1,7 +1,7 @@
-import { postBiasa } from "./js/api.js";
-import { getValue } from "./js/element.js";
-import { setCookieWithExpireHour } from "./js/cookies.js";
-import { signinAdmin } from "./js/gudangAPI.js"
+import { postBiasa } from "./api.js";
+import { getValue } from "./element.js";
+import { setCookieWithExpireHour } from "./cookies.js";
+import { signinAdmin } from "./gudangAPI.js"
 
 // const loadingIndicator = document.getElementById("loadingIndicator");
 // const loginButton = document.getElementById("btnLogin");
@@ -46,7 +46,7 @@ function responseData(data) {
         // Additional actions you may want to perform
 
         // For example, redirecting to another page
-        window.location.href = "../dashboard.html";
+        window.location.href = "./index.html";
     } else {
         // Handle the case where login is not successful
         console.error("Login failed. Status:", data.status, "Message:", data.token);
