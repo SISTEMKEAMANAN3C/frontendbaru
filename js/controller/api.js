@@ -39,7 +39,7 @@ export function postHeader(target_url,datajson,tokenkey,tokenvalue,responseFunct
     .catch(error => console.log('error', error));
 }
 
-export function patchHeader(target_url,datajson,tokenkey,tokenvalue,responseFunction){
+export function putHeader(target_url,datajson,tokenkey,tokenvalue,responseFunction){
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append(tokenkey, tokenvalue);
@@ -48,7 +48,7 @@ export function patchHeader(target_url,datajson,tokenkey,tokenvalue,responseFunc
     var raw = JSON.stringify(datajson);
 
     var requestOptions = {
-    method: 'POST',
+    method: 'PUT',
     headers: myHeaders,
     body: raw,
     redirect: 'follow'
