@@ -4,11 +4,11 @@ import { setCookieWithExpireHour } from "./js/cookies.js";
 import { signinAdmin } from "./js/gudangAPI.js"
 
 // const loadingIndicator = document.getElementById("loadingIndicator");
-const loginButton = document.getElementById("btnLogin");
+// const loginButton = document.getElementById("btnLogin");
 
-export default function LoginAdminFix(){
-    let username = getValue("username");
-    let password = getValue("password");
+export default function LoginAdmin(){
+    let username = getValue("usernamelogin");
+    let password = getValue("passwordlogin");
     if (!username) {
         // alert("Username perlu untuk diisi");
         return; // Stop execution if the fields are not filled
@@ -22,15 +22,15 @@ export default function LoginAdminFix(){
         "password": password
     }
 
-    loginButton.style.display = "none";
-    loadingIndicator.style.display = "block";
+    // loginButton.style.display = "none";
+    // loadingIndicator.style.display = "block";
 
     postBiasa(signinAdmin,datainjson,responseData);
 
 }
 
 function responseData(data) {
-    loadingIndicator.style.display = "none";
+    // loadingIndicator.style.display = "none";
 
     if (data.status === true) {
         const token = data.token;
@@ -46,7 +46,7 @@ function responseData(data) {
         // Additional actions you may want to perform
 
         // For example, redirecting to another page
-        window.location.href = "https://fancypedia.my.id/cms/";
+        window.location.href = "../dashboard.html";
     } else {
         // Handle the case where login is not successful
         console.error("Login failed. Status:", data.status, "Message:", data.token);

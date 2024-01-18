@@ -1,38 +1,47 @@
-// Fetch all products from the server
-function getDosen() {
-    fetch('')
-      .then(response => response.json())
-      .then(data => {
-        if (data.status === true) {
-          displayProducts(data.data);
-        } else {
-          console.error('Failed to fetch products');
-        }
-      })
-      .catch(error => console.error('Error:', error));
-  }
-  
-  // Display products in the table
-  function displayProducts(products) {
-    const tableBody = document.getElementById('productTableBody');
-    tableBody.innerHTML = '';
-  
-    products.forEach(product => {
-      const row = document.createElement('tr');
-      row.innerHTML = `
-        <td>${product.id}</td>
-        <td>${product.content_one}</td>
-        <td>${product.content_two}</td>
-        <td><img src="${product.image}" alt="Product Image" style="width: 50px; height: 50px;"></td>
-        <td>${product.description}</td>
-        <td>${product.status ? 'True' : 'False'}</td>
-        <td><a href="updatedDosen.html?id=${product.id}&content_one=${product.content_one}&content_two=${product.content_two}&image=${product.image}&description=${product.description}&status=${product.status}">Edit</a></td>
-        <td><a href="deleteDosen.html?id=${product.id}">Delete</a></td>
-      `;
-      tableBody.appendChild(row);
-    });
-  }
-  
-  // Fetch and display products on page load
-  window.onload = getDosen;
-  
+import { getCookie } from "./js/cookies.js";
+import { getHeader } from "./js/api.js";
+import { GetAllform } from "./js/gudangAPI.js";
+
+export default function getDosen() {
+  let tokenvalue = getCookie("token");
+
+  getHeader(GetAllform,"token",tokenvalue,responseData);
+}
+
+// Display products in the tabl3
+function responseData(products) {
+  const tableBody = document.getElementById('productTableBody');
+  tableBody.innerHTML = '';
+
+  products.forEach(product => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${product.nik}</td>
+      <td>${product.akademis.nama_dosen}</td>
+      <td>${product.akademis.pendidikan_dosen}</td>
+      <td>${product.akademis.kurikulum_dosen}</td>
+      <td>${product.akademis.penelitian_dosen}</td>
+      <td>${product.akademis.gelar_dosen}</td>
+      <td>${product.akademis.lembaga_dosen}</td>
+      <td>${product.akademis.kemampuan_dosen}</td>
+      <td>${product.akademis.penghargaan_dosen}</td>
+
+      <td>${product.sertifikat.map(cert => cert.judul_sertifikat).join(', ')}</td>
+      <td>${product.sertifikat.map(cert => cert.pemberi_sertifikat).join(', ')}</td>
+      <td>${product.sertifikat.map(cert => cert.penerima_sertifikat).join(', ')}</td>
+      <td>${product.sertifikat.map(cert => cert.tujuan_sertifikat).join(', ')}</td>
+      <td>${product.sertifikat.map(cert => cert.tanggal_penerbitan_sertifikat).join(', ')}</td>
+      <td>${product.sertifikat.map(cert => cert.cap_sertifikat).join(', ')}</td>
+      <td>${product.sertifikat.map(cert => cert.nomor_sertifikat).join(', ')}</td>
+      <td>${product.sertifikat.map(cert => cert.info_sertifikat).join(', ')}</td>
+      <td>${product.sertifikat.map(cert => cert.logo_sertifikat).join(', ')}</td>
+
+      <td>${product.suratkerja.map(job => job.penawaran_kerja).join(', ')}</td>
+      <td>${product.suratkerja.map(job => job.perjanjian_kerja).join(', ')}</td>
+      <td>${product.suratkerja.map(job => job.pemberhentian_kerja).join(', ')}</td>
+      <td>${product.suratkerja.map(job => job.keterangan_kerja).join(', ')}</td>
+      <td>${product.suratkerja.map(job => job.kuasa_kerja).join(', ')}</td>
+    `;
+    tableBody.appendChild(row);
+  });
+}

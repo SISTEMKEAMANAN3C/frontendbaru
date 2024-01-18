@@ -1,4 +1,4 @@
-import { postBiasa } from "./js/api.js";
+import { postHeader } from "./js/api.js";
 import { getValue } from "./js/element.js";
 import { createDosenn } from "./js/gudangAPI.js";
 import { getCookie } from "./js/cookies.js";
@@ -11,33 +11,44 @@ export default function createDosen(){
 
 
     let datainjson = {
-        "id": parseInt(getValue("id")),
-        "namadosen": getValue("namadosen"),
-        "pendidikandosen": getValue("pendidikandosen"),
-        "kurikulumdosen": getValue("kurikulumdosen"),
-        "penelitiandosen": getValue("penelitiandosen"),
-        "gelardosen": getValue("gelardosen"),
-        "lembagadosen": getValue("lembagadosen"),
-        "kemampuandosen": getValue("kemampuandosen"),
-        "penghargaandosen": getValue("penghargaandosen"),
-        "judulsertifikat": getValue("judulsertifikat"),
-        "pemberisertifikat": getValue("pemberisertifikat"),
-        "penerimasertifikat": getValue("penerimasertifikat"),
-        "tujuansertifikat": getValue("tujuansertifikat"),
-        "tanggalpenerbitansertifikat": getValue("tanggalpenerbitansertifikat"),
-        "capsertifikat": getValue("capsertifikat"),
-        "nomorsertifikat": getValue("nomorsertifikat"),
-        "infosertifikat": getValue("infosertifikat"),
-        "logosertifikat": getValue("logosertifikat"),
-        "penawarankerja": getValue("penawarankerja"),
-        "perjanjiankerja": getValue("perjanjiankerja"),
-        "pemberhentiankerja": getValue("pemberhentiankerja"),
-        "keterangankerja": getValue("keterangankerja"),
-        "kuasakerja": getValue("kuasakerja"),
+        "nik": getValue("nik"),
+        "akademis": {
+            "nama_dosen": getValue("nama_dosen"),
+            "pendidikan_dosen": getValue("pendidikan_dosen"),
+            "kurikulum_dosen": getValue("kurikulum_dosen"),
+            "penelitian_dosen": getValue("penelitian_dosen"),
+            "gelar_dosen": getValue("gelar_dosen"),
+            "lembaga_dosen": getValue("lembaga_dosen"),
+            "kemampuan_dosen": getValue("kemampuan_dosen"),
+            "penghargaan_dosen": getValue("penghargaan_dosen")
+        },
+        "sertifikat": [
+            {
+                "judul_sertifikat": getValue("judul_sertifikat"),
+                "pemberi_sertifikat": getValue("pemberi_sertifikat"),
+                "penerima_sertifikat": getValue("penerima_sertifikat"),
+                "tujuan_sertifikat": getValue("tujuan_sertifikat"),
+                "tanggal_penerbitan_sertifikat": getValue("tanggal_penerbitan_sertifikat"),
+                "cap_sertifikat": getValue("cap_sertifikat"),
+                "nomor_sertifikat": getValue("nomor_sertifikat"),
+                "info_sertifikat": getValue("info_sertifikat"),
+                "logo_sertifikat": getValue("logo_sertifikat")
+            }
+        ],
+        "suratkerja": [
+            {
+                "penawaran_kerja": getValue("penawaran_kerja"),
+                "perjanjian_kerja": getValue("perjanjian_kerja"),
+                "pemberhentian_kerja": getValue("pemberhentian_kerja"),
+                "keterangan_kerja": getValue("keterangan_kerja"),
+                "kuasa_kerja": getValue("kuasa_kerja")
+            }
+        ],
         "status": true
-    }
+    };
+
     
-    postBiasa(createDosenn,datainjson,tokenkey,tokenvalue,responseData);
+    postHeader(createDosenn,datainjson,tokenkey,tokenvalue,responseData);
 }
 
 function responseData(result) {

@@ -126,11 +126,9 @@
                                 <!-- /.panel-heading -->
                                 <div class="panel-body">
                                     <div class="table-responsive">
-                                        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                        <table id="productTable" class="table table-striped table-bordered table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th>Edit</th>    
-                                                    <th>Delete</th>    
                                                     <th>NIK</th>    
                                                     <th>Nama Dosen</th>
                                                     <th>Pendidikan Dosen</th>
@@ -154,8 +152,11 @@
                                                     <th>Pemberhentian Kerja</th>
                                                     <th>Keterangan Kerja</th>
                                                     <th>Kuasa Kerja</th>
+                                                    <th>Edit</th>    
+                                                    <th>Delete</th>  
                                                 </tr>
                                             </thead>
+                                            <tbody id="productTableBody"></tbody>
                                         </table>
                                     </div>
                                     
@@ -198,6 +199,8 @@
                 });
             });
         </script>
+
+        <script type="module" src="./controller/main.js"></script>
 
     </body>
 
