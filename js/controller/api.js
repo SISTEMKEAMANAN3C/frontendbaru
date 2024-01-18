@@ -60,9 +60,18 @@ export function patchHeader(target_url,datajson,tokenkey,tokenvalue,responseFunc
     .catch(error => console.log('error', error));
 }
 
-export function get(target_url,responseFunction){
+export function deleteHeader(target_url,datajson,tokenkey,tokenvalue,responseFunction){
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append(tokenkey, tokenvalue);
+
+
+    var raw = JSON.stringify(datajson);
+
     var requestOptions = {
-    method: 'GET',
+    method: 'DELETE',
+    headers: myHeaders,
+    body: raw,
     redirect: 'follow'
     };
 

@@ -4,12 +4,14 @@ import LoginAdmin from "./signin.js";
 import getDosen from "./getDosen.js";
 import getDetailForm from "./detaildosen.js";
 import Logout from "./logout.js";
+import DeleteDosen from "./deletedosen.js";
 
 
 window.LoginAdmin = LoginAdmin;
 
 window.createDosen = createDosen;
 window.getDetailForm = getDetailForm;
+window.DeleteDosen = DeleteDosen;
 window.editDosen = editDosen;
 window.Logout = Logout;
 
@@ -20,3 +22,10 @@ if (productTableBodyElement) {
     console.log("Element with ID 'productTableBody' not found. getDosen not executed.");
 }
 
+
+// value params
+const searchParams = new URLSearchParams(window.location.search);
+const nik = searchParams.get("nik");
+
+// change value form
+document.getElementById("delete-nik").value = nik;
