@@ -1,13 +1,13 @@
 import { getCookie } from "./cookies.js";
 import { getHeader } from "./api.js";
-import { AmbilSatuFormDosen } from "./gudangAPI.js";
+import { AmbilSatuFormDosenAPI } from "./gudangAPI.js";
 
 
 export default function getDetailForm() {
     let tokenkey = "token";
     let tokenvalue = getCookie("token");
 
-    getHeader(AmbilSatuFormDosen, tokenkey, tokenvalue, responseData);
+    getHeader(AmbilSatuFormDosenAPI, tokenkey, tokenvalue, responseData);
 }
 
 // Display products in the tabl3
@@ -19,6 +19,28 @@ function responseData(products) {
 
     // Set the HTML content for the post
     postDiv.innerHTML = `
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+                            <form role="form" action="javascript:void(0);">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>NIK</label>
+                                        <input id="detail-nik" class="form-control" value="${products.nik}" disabled>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /.row (nested) -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">

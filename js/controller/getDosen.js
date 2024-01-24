@@ -34,8 +34,4 @@ function responseData(products) {
     });
 }
 
-// Function to handle the edit button click
-function editDosen(product) {
-    // Redirect to updatedosen.html and pass the product as a parameter
-    window.location.href = `updatedosen.html?data=${encodeURIComponent(JSON.stringify(product))}`;
-}
+

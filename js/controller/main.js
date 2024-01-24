@@ -87,6 +87,7 @@ if (updateElement) {
     document.getElementById("update-cap-sertifikat").value = cap_sertifikat;
     document.getElementById("update-nomor-sertifikat").value = nomor_sertifikat;
     document.getElementById("update-info-sertifikat").value = info_sertifikat;
+    document.getElementById("update-logo-sertifikat").value = logo_sertifikat;
     document.getElementById("update-penawaran-kerja").value = penawaran_kerja;
     document.getElementById("update-perjanjian-kerja").value = perjanjian_kerja;
     document.getElementById("update-pemberhentian-kerja").value = pemberhentian_kerja;

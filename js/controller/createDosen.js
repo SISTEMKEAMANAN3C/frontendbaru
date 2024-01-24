@@ -1,6 +1,6 @@
 import { postHeader } from "./api.js";
 import { getValue } from "./element.js";
-import { createDosenn } from "./gudangAPI.js";
+import { TambahFormAPI } from "./gudangAPI.js";
 import { getCookie } from "./cookies.js";
 
 
@@ -48,7 +48,7 @@ export default function createDosen(){
     };
 
     
-    postHeader(createDosenn,datainjson,tokenkey,tokenvalue,responseData);
+    postHeader(TambahFormAPI,datainjson,tokenkey,tokenvalue,responseData);
 }
 
 function responseData(result) {
