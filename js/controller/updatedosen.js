@@ -15,10 +15,7 @@ export default function UpdateDosen(){
         "akademis": {
             "nama_dosen": getValue("update-nama-dosen"),
             "pendidikan_dosen": getValue("update-pendidikan-dosen"),
-            "kurikulum_dosen": getValue("update-kurikulum-dosen"),
-            "penelitian_dosen": getValue("update-penelitian-dosen"),
             "gelar_dosen": getValue("update-gelar-dosen"),
-            "lembaga_dosen": getValue("update-lembaga-dosen"),
             "kemampuan_dosen": getValue("update-kemampuan-dosen"),
             "penghargaan_dosen": getValue("update-penghargaan-dosen")
         },
@@ -27,12 +24,8 @@ export default function UpdateDosen(){
                 "judul_sertifikat": getValue("update-judul-sertifikat"),
                 "pemberi_sertifikat": getValue("update-pemberi-sertifikat"),
                 "penerima_sertifikat": getValue("update-penerima-sertifikat"),
-                "tujuan_sertifikat": getValue("update-tujuan-sertifikat"),
                 "tanggal_penerbitan_sertifikat": getValue("update-tanggal-penerbitan-sertifikat"),
-                "cap_sertifikat": getValue("update-cap-sertifikat"),
                 "nomor_sertifikat": getValue("update-nomor-sertifikat"),
-                "info_sertifikat": getValue("update-info-sertifikat"),
-                "logo_sertifikat": getValue("update-logo-sertifikat")
             }
         ],
         "suratkerja": [

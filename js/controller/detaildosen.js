@@ -55,10 +55,7 @@ function responseData(products) {
                                     <tr>
                                         <th>Nama Dosen</th>
                                         <th>Pendidikan Dosen</th>
-                                        <th>Kuriulum Dosen</th>
-                                        <th>Penelitian Dosen</th>
                                         <th>Gelar Dosen</th>
-                                        <th>Lembaga Dosen</th>
                                         <th>Kemampuan Dosen</th>
                                         <th>Penghargaan Dosen</th>
                                     </tr>
@@ -67,10 +64,7 @@ function responseData(products) {
                                     <tr>
                                         <td>${products.akademis.nama_dosen}</td>
                                         <td>${products.akademis.pendidikan_dosen}</td>
-                                        <td>${products.akademis.kurikulum_dosen}</td>
-                                        <td>${products.akademis.penelitian_dosen}</td>
                                         <td>${products.akademis.gelar_dosen}</td>
-                                        <td>${products.akademis.lembaga_dosen}</td>
                                         <td>${products.akademis.kemampuan_dosen}</td>
                                         <td>${products.akademis.penghargaan_dosen}</td>
                                     </tr>
@@ -99,12 +93,8 @@ function responseData(products) {
                                         <th>Judul Sertifikat</th>
                                         <th>Pemberi Sertifikat</th>
                                         <th>Penerima Sertifikat</th>
-                                        <th>Tujuan Sertifikat</th>
                                         <th>Tanggal Penerbitan Sertifikat</th>
-                                        <th>Cap Sertifikat</th>
-                                        <th>Nomo Sertifikat</th>
-                                        <th>Info Sertifikat</th>
-                                        <th>Logo Sertifikat</th>
+                                        <th>Nomor Sertifikat</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -112,12 +102,8 @@ function responseData(products) {
                                         <td>${products.sertifikat.map(cert => cert.judul_sertifikat).join(', ')}</td>
                                         <td>${products.sertifikat.map(cert => cert.pemberi_sertifikat).join(', ')}</td>
                                         <td>${products.sertifikat.map(cert => cert.penerima_sertifikat).join(', ')}</td>
-                                        <td>${products.sertifikat.map(cert => cert.tujuan_sertifikat).join(', ')}</td>
                                         <td>${products.sertifikat.map(cert => cert.tanggal_penerbitan_sertifikat).join(', ')}</td>
-                                        <td>${products.sertifikat.map(cert => cert.cap_sertifikat).join(', ')}</td>
                                         <td>${products.sertifikat.map(cert => cert.nomor_sertifikat).join(', ')}</td>
-                                        <td>${products.sertifikat.map(cert => cert.info_sertifikat).join(', ')}</td>
-                                        <td>${products.sertifikat.map(cert => cert.logo_sertifikat).join(', ')}</td>
                                     </tr>
                                 </tbody>
                             </table>
