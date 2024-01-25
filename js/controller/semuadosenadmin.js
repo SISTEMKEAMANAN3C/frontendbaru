@@ -2,7 +2,7 @@ import { getCookie } from "./cookies.js";
 import { getHeader } from "./api.js";
 import { AmbilSemuaFormAPI } from "./gudangAPI.js";
 
-export default function getDosen() {
+export default function AmbilSemuaFormAdmin() {
     let tokenkey = "token";
     let tokenvalue = getCookie("token");
 
@@ -11,7 +11,7 @@ export default function getDosen() {
 
 // Display products in the table
 function responseData(products) {
-    const tableBody = document.getElementById('productTableBody');
+    const tableBody = document.getElementById('productTableBodyAdmin');
     tableBody.innerHTML = '';
 
     products.forEach(product => {

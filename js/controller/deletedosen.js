@@ -1,21 +1,18 @@
 import { deleteHeader } from "./api.js";
-import { getValue } from "./element.js";
 import { getCookie } from "./cookies.js";
-import { HapusFormAPI } from "./gudangAPI.js"
+import { HapusFormDosenAPI } from "./gudangAPI.js"
 
-export default function DeleteDosen(){
-    let nik = getValue("delete-nik");
+export default function HapusFormDosen(){
     let tokenkey = "token";
     let tokenvalue = getCookie("token");
 
-    let datainjson = {
-        "nik": nik
-    }
+    let datainjson = {}
 
-    deleteHeader(HapusFormAPI, datainjson, tokenkey, tokenvalue, responseData);
+    deleteHeader(HapusFormDosenAPI, datainjson, tokenkey, tokenvalue, responseData);
 
 }
 
 function responseData(data) {
     console.log(data)
+    window.location.href = "./semuadosen.html";
 }

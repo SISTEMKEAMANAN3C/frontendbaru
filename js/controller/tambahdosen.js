@@ -1,6 +1,6 @@
 import { postHeader } from "./api.js";
 import { getValue } from "./element.js";
-import { TambahFormAPI } from "./gudangAPI.js";
+import { TambahFormDosenAPI } from "./gudangAPI.js";
 import { getCookie } from "./cookies.js";
 
 
@@ -11,7 +11,6 @@ export default function createDosen(){
 
 
     let datainjson = {
-        "nik": getValue("nik"),
         "akademis": {
             "nama_dosen": getValue("nama_dosen"),
             "pendidikan_dosen": getValue("pendidikan_dosen"),
@@ -41,13 +40,10 @@ export default function createDosen(){
     };
 
     
-    postHeader(TambahFormAPI,datainjson,tokenkey,tokenvalue,responseData);
+    postHeader(TambahFormDosenAPI,datainjson,tokenkey,tokenvalue,responseData);
 }
 
 function responseData(result) {
-
-    if (result.status == true) {
-        alert("Berhasil Input Data");
-        window.location.href = "../semuadosen.html";
-    }
+    alert(result.message);
+    window.location.href = "./detaildosen.html";
 }

@@ -1,18 +1,23 @@
 import { getCookie } from "./cookies.js";
-import { getHeader } from "./api.js";
-import { AmbilSatuFormDosenAPI } from "./gudangAPI.js";
+import { postHeader } from "./api.js";
+import { getValue } from "./element.js";
+import { AmbilSatuFormAdminAPI } from "./gudangAPI.js";
 
 
-export default function getDetailForm() {
+export default function AmbilSatuFormAdmin() {
     let tokenkey = "token";
     let tokenvalue = getCookie("token");
 
-    getHeader(AmbilSatuFormDosenAPI, tokenkey, tokenvalue, responseData);
+    let datainjson = {
+        "nik": getValue("nik_detail_admin")
+    };
+
+    postHeader(AmbilSatuFormAdminAPI, datainjson, tokenkey, tokenvalue, responseData);
 }
 
 // Display products in the tabl3
 function responseData(products) {
-    const postContainer = document.getElementById('ini-detail-dosen');
+    const postContainer = document.getElementById('ini-detail-dosen-admin');
     // Create a new div for each post
     const postDiv = document.createElement('div');
     postDiv.classList.add('post');
@@ -152,8 +157,6 @@ function responseData(products) {
                 <!-- /.panel -->
             </div>
         </div>
-        <td><a class="btn btn-outline btn-success" href="updatedosen.html?nama_dosen=${products.akademis.nama_dosen}&pendidikan_dosen=${products.akademis.pendidikan_dosen}&gelar_dosen=${products.akademis.gelar_dosen}&kemampuan_dosen=${products.akademis.kemampuan_dosen}&penghargaan_dosen=${products.akademis.penghargaan_dosen}&judul_sertifikat=${products.sertifikat.map(cert => cert.judul_sertifikat).join(', ')}&pemberi_sertifikat=${products.sertifikat.map(cert => cert.pemberi_sertifikat).join(', ')}&penerima_sertifikat=${products.sertifikat.map(cert => cert.penerima_sertifikat).join(', ')}&tanggal_penerbitan_sertifikat=${products.sertifikat.map(cert => cert.tanggal_penerbitan_sertifikat).join(', ')}&nomor_sertifikat=${products.sertifikat.map(cert => cert.nomor_sertifikat).join(', ')}&penawaran_kerja=${products.suratkerja.map(cert => cert.penawaran_kerja).join(', ')}&perjanjian_kerja=${products.suratkerja.map(cert => cert.perjanjian_kerja).join(', ')}&pemberhentian_kerja=${products.suratkerja.map(cert => cert.pemberhentian_kerja).join(', ')}&keterangan_kerja=${products.suratkerja.map(cert => cert.keterangan_kerja).join(', ')}&kuasa_kerja=${products.suratkerja.map(cert => cert.kuasa_kerja).join(', ')}">Edit</a></td>
-        <td><a class="btn btn-outline btn-danger" onclick="HapusFormDosen()"">Delete</a></td>
     `
     postContainer.appendChild(postDiv);
 }
