@@ -31,7 +31,7 @@
     </head>
 
     <body>
-        <div id="ini-halaman-update-akun-admin"></div>
+        <div id="ini-halaman-registrasi"></div>
 
         <div id="wrapper">
 
@@ -100,6 +100,9 @@
                                 <li>
                                     <a href="../admin/semuaakun.html">Semua Akun</a>
                                 </li>
+                                <li>
+                                    <a href="../admin/tambahakun.html">Buat Akun</a>
+                                </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -145,22 +148,22 @@
                                             <div class="col-lg-12">
                                                 <div class="form-group">
                                                     <label>Username</label>
-                                                    <input id="update_username_akun_admin" name="nik" type="string" class="form-control">
+                                                    <input id="username_akun_admin" name="nik" type="string" class="form-control">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Password</label>
-                                                    <input id="update_password_akun_admin" name="nik" type="string" class="form-control" placeholder="Kosongkan jika tidak ingin mengganti password">
+                                                    <input id="password_akun_admin" name="nik" type="string" class="form-control">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Role</label>
-                                                    <input id="update_role_akun_admin" name="nik" type="string" class="form-control">
+                                                    <input id="role_akun_admin" name="nik" type="string" class="form-control">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>NIK</label>
-                                                    <input id="update_nik_akun_admin" name="nik" type="string" class="form-control" placeholder="Tidak perlu diisi jika membuat akun admin">
+                                                    <input id="nik_akun_admin" name="nik" type="string" class="form-control" placeholder="Tidak perlu diisi jika membuat akun admin">
                                                 </div>
                                             </div>
-                                            <button type="submit" onclick="EditUserAdmin()" class="btn btn-default">Submit Button</button>
+                                            <button type="submit" onclick="Registrasi()" class="btn btn-default">Submit Button</button>
                                             <button type="reset" class="btn btn-default">Reset Button</button>
                                         </div>
                                         <!-- /.col-lg-6 (nested) -->
