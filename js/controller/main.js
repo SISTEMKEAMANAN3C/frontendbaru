@@ -9,6 +9,7 @@ import AmbilSatuFormAdmin from "./detaildosenadmin.js";
 import Logout from "./logout.js";
 import HapusFormDosen from "./deletedosen.js";
 import HapusFormAdmin from "./deletedosenadmin.js";
+import HapusUserAPI from "./deleteakun.js";
 import EditFormDosen from "./updatedosen.js";
 import EditFormAdmin from "./updatedosenadmin.js";
 import AmbilSemuaFormAdmin from "./semuadosenadmin.js";
@@ -18,6 +19,7 @@ import AmbilSemuaAkun from "./semuaakun.js";
 window.LoginAdmin = LoginAdmin;
 window.Registrasi = Registrasi;
 window.EditUserAdmin = EditUserAdmin;
+window.HapusUserAPI = HapusUserAPI;
 
 window.createDosen = createDosen;
 window.TambahFormAdmin = TambahFormAdmin;
@@ -165,4 +167,16 @@ if (updateakunadminElement) {
     document.getElementById("update_nik_akun_admin").value = nik;
 } else {
     console.log("Element with ID 'ini-halaman-update-akun-admin' not found.");
+}
+
+const delete_usernameElement = document.getElementById('delete_username');
+if (delete_usernameElement) {
+    // value params
+    const searchParams = new URLSearchParams(window.location.search);
+    const username = searchParams.get("username");
+
+    // change value form
+    document.getElementById("delete_username").value = username;
+} else {
+    console.log("Element with ID 'delete_username' not found.");
 }

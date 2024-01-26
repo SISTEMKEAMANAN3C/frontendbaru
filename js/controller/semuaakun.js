@@ -21,7 +21,7 @@ function responseData(products) {
             <td>${product.role}</td>
             <td>${product.nik}</td>
             <td><a class="btn btn-outline btn-success" href="updateakunadmin.html?username=${product.username}&role=${product.role}&nik=${product.nik}">Edit</a></td>
-        <td><a class="btn btn-outline btn-danger" onclick="HapusFormDosen()"">Delete</a></td>
+            <td><a class="btn btn-outline btn-danger" href="updateakunadmin.html?username=${product.username}">Delete</a></td>
         `;
 
         tableBody.appendChild(row);

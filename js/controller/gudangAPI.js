@@ -17,3 +17,4 @@ export let HapusFormAdminAPI = "http://localhost:8080/HapusFormAdminAPI"
 
 export let AmbilSemuaAkunAPI = "http://localhost:8080/AmbilSemuaAkunAPI"
 export let EditUserAdminAPI = "http://localhost:8080/EditUserAdminAPI"
+export let HapusUserAPI = "http://localhost:8080/HapusUserAPI"
