@@ -44,9 +44,6 @@ export default function EditFormDosen(){
 }
 
 function responseData(result) {
-
-    if (result.status == true) {
-        alert("Berhasil Update Data");
-        window.location.href = "./detaildosen.html";
-    }
+    alert(result.message);
+    window.location.href = "./detaildosen.html";
 }

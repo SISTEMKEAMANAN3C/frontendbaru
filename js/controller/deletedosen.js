@@ -13,6 +13,6 @@ export default function HapusFormDosen(){
 }
 
 function responseData(data) {
-    console.log(data)
+    alert(data.message);
     window.location.href = "./semuadosen.html";
 }

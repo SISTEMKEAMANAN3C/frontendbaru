@@ -6,7 +6,9 @@ import getDetailForm from "./detaildosen.js";
 import AmbilSatuFormAdmin from "./detaildosenadmin.js";
 import Logout from "./logout.js";
 import HapusFormDosen from "./deletedosen.js";
+import HapusFormAdmin from "./deletedosenadmin.js";
 import EditFormDosen from "./updatedosen.js";
+import EditFormAdmin from "./updatedosenadmin.js";
 import AmbilSemuaFormAdmin from "./semuadosenadmin.js";
 
 
@@ -17,7 +19,9 @@ window.TambahFormAdmin = TambahFormAdmin;
 window.getDetailForm = getDetailForm;
 window.AmbilSatuFormAdmin = AmbilSatuFormAdmin;
 window.HapusFormDosen = HapusFormDosen;
+window.HapusFormAdmin = HapusFormAdmin;
 window.EditFormDosen = EditFormDosen;
+window.EditFormAdmin = EditFormAdmin;
 window.Logout = Logout;
 
 const productTableBodyElement = document.getElementById('productTableBody');
@@ -75,7 +79,7 @@ if (updateAdminElement) {
     const kuasa_kerja = searchParams.get("kuasa_kerja");
 
     // change value form
-    document.getElementById("update_nik").value = nik;
+    document.getElementById("update_nik_admin").value = nik;
     document.getElementById("update_nama_dosen_admin").value = nama_dosen;
     document.getElementById("update_pendidikan_dosen_admin").value = pendidikan_dosen;
     document.getElementById("update_gelar_dosen_admin").value = gelar_dosen;
