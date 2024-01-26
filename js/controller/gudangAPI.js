@@ -14,3 +14,6 @@ export let TambahFormAdminAPI = "http://localhost:8080/TambahFormAdminAPI"
 export let AmbilSatuFormAdminAPI = "http://localhost:8080/AmbilSatuFormAdminAPI"
 export let EditFormAdminAPI = "http://localhost:8080/EditFormAdminAPI"
 export let HapusFormAdminAPI = "http://localhost:8080/HapusFormAdminAPI"
+
+export let AmbilSemuaAkunAPI = "http://localhost:8080/AmbilSemuaAkunAPI"
+export let EditUserAdminAPI = "http://localhost:8080/EditUserAdminAPI"

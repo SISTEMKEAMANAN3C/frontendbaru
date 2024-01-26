@@ -1,6 +1,8 @@
 import createDosen from "./tambahdosen.js";
 import TambahFormAdmin from "./tambahdosenadmin.js";
 import LoginAdmin from "./signin.js";
+import Registrasi from "./registrasi.js";
+import EditUserAdmin from "./updateakunadmin.js";
 import getDosen from "./semuadosen.js";
 import getDetailForm from "./detaildosen.js";
 import AmbilSatuFormAdmin from "./detaildosenadmin.js";
@@ -10,9 +12,12 @@ import HapusFormAdmin from "./deletedosenadmin.js";
 import EditFormDosen from "./updatedosen.js";
 import EditFormAdmin from "./updatedosenadmin.js";
 import AmbilSemuaFormAdmin from "./semuadosenadmin.js";
+import AmbilSemuaAkun from "./semuaakun.js";
 
 
 window.LoginAdmin = LoginAdmin;
+window.Registrasi = Registrasi;
+window.EditUserAdmin = EditUserAdmin;
 
 window.createDosen = createDosen;
 window.TambahFormAdmin = TambahFormAdmin;
@@ -137,4 +142,27 @@ if (updateElement) {
     document.getElementById("update_kuasa_kerja").value = kuasa_kerja;
 } else {
     console.log("Element with ID 'ini-halaman-update-admin' not found.");
+}
+
+const semuaakunTableElement = document.getElementById('semuaakunTable');
+if (semuaakunTableElement) {
+    AmbilSemuaAkun();
+} else {
+    console.log("Element with ID 'semuaakunTable' not found. AmbilSemuaAkun not executed.");
+}
+
+const updateakunadminElement = document.getElementById('ini-halaman-update-akun-admin');
+if (updateakunadminElement) {
+    // value params
+    const searchParams = new URLSearchParams(window.location.search);
+    const username = searchParams.get("username");
+    const role = searchParams.get("role");
+    const nik = searchParams.get("nik");
+
+    // change value form
+    document.getElementById("update_username_akun_admin").value = username;
+    document.getElementById("update_role_akun_admin").value = role;
+    document.getElementById("update_nik_akun_admin").value = nik;
+} else {
+    console.log("Element with ID 'ini-halaman-update-akun-admin' not found.");
 }

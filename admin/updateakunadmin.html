@@ -31,6 +31,7 @@
     </head>
 
     <body>
+        <div id="ini-halaman-update-akun-admin"></div>
 
         <div id="wrapper">
 
@@ -141,91 +142,25 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div role="form">
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-12">
+                                                <div class="form-group">
+                                                    <label>Username</label>
+                                                    <input id="update_username_akun_admin" name="nik" type="string" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Password</label>
+                                                    <input id="update_password_akun_admin" name="nik" type="string" class="form-control" placeholder="Kosongkan jika tidak ingin mengganti password">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Role</label>
+                                                    <input id="update_role_akun_admin" name="nik" type="string" class="form-control">
+                                                </div>
                                                 <div class="form-group">
                                                     <label>NIK</label>
-                                                    <input id="nik_admin" name="nik" type="number" class="form-control">
-                                                </div>
-                                                
-                                                <h2>Akademisi</h2>
-
-                                                <div class="form-group">
-                                                    <label>Nama Dosen</label>
-                                                    <input id="nama_dosen_admin" name="nama_dosen" type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Pendidikan Dosen</label>
-                                                    <input id="pendidikan_dosen_admin" name="pendidikan_dosen" type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Gelar Dosen</label>
-                                                    <input id="gelar_dosen_admin" name="gelar_dosen" type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Kemampuan Dosen</label>
-                                                    <input id="kemampuan_dosen_admin" name="kemampuan_dosen" type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Penghargaan Dosen</label>
-                                                    <input id="penghargaan_dosen_admin" name="penghargaan_dosen" type="text" class="form-control">
-                                                </div>
-
-                                                <h2>Sertifikat</h2>
-
-                                                <div class="form-group">
-                                                    <label>Judul Sertifikat</label>
-                                                    <input id="judul_sertifikat_admin" name="judul_sertifikat" type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Pemberi Sertifikat</label>
-                                                    <input id="pemberi_sertifikat_admin" name="pemberi_sertifikat" type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Penerima Sertifikat</label>
-                                                    <input id="penerima_sertifikat_admin" name="penerima_sertifikat" type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Tanggal Penerbitan Sertifikat</label>
-                                                    <input id="tanggal_penerbitan_sertifikat_admin" name="tanggal_penerbitan_sertifikat" type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Nomor Sertifikat</label>
-                                                    <input id="nomor_sertifikat_admin" name="nomor_sertifikat" type="text" class="form-control">
+                                                    <input id="update_nik_akun_admin" name="nik" type="string" class="form-control" placeholder="Tidak perlu diisi jika membuat akun admin">
                                                 </div>
                                             </div>
-                                            <!-- /.col-lg-6 (nested) -->
-                                            <div class="col-lg-6">
-                                                <h2>Surat Kerja</h2>
-
-                                                <div class="form-group">
-                                                    <label>Penawaran Kerja</label>
-                                                    <input id="penawaran_kerja_admin" name="penawaran_kerja" type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Perjanjian Kerja</label>
-                                                    <input id="perjanjian_kerja_admin" name="perjanjian_kerja" type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Pemberhentian Kerja</label>
-                                                    <input id="pemberhentian_kerja_admin" name="pemberhentian_kerja" type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Keterangan Kerja</label>
-                                                    <input id="keterangan_kerja_admin" name="keterangan_kerja" type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Kuasa Kerja</label>
-                                                    <input id="kuasa_kerja_admin" name="kuasa_kerja" type="text" class="form-control">
-                                                </div>
-                                                
-                                                <div class="form-group">
-                                                    <label>Status</label>
-                                                    <label class="radio-inline">
-                                                        <input type="checkbox" id="status" required>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <button type="submit" onclick="TambahFormAdmin()" class="btn btn-default">Submit Button</button>
+                                            <button type="submit" onclick="EditUserAdmin()" class="btn btn-default">Submit Button</button>
                                             <button type="reset" class="btn btn-default">Reset Button</button>
                                         </div>
                                         <!-- /.col-lg-6 (nested) -->
