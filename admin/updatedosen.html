@@ -158,8 +158,16 @@
                                                     <input id="update_nama_dosen_admin" name="namadosen" type="text" class="form-control">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Pendidikan Dosen</label>
-                                                    <input id="update_pendidikan_dosen_admin" name="pendidikandosen" type="text" class="form-control">
+                                                    <!-- <label>Pendidikan Dosen</label>
+                                                    <input id="update_pendidikan_dosen_admin" name="pendidikandosen" type="text" class="form-control"> -->
+                                                    <label for="program_studi">Pendidikan Dosen</label>
+                                                    <br>
+                                                    <select id="update_pendidikan_dosen_admin" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                                        <!-- <option selected>Pilih</option> -->
+                                                        <option value="S1">S1</option>
+                                                        <option value="S2">S2</option>
+                                                        <option value="S3">S3</option>
+                                                      </select>
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Gelar Dosen</label>
@@ -189,8 +197,11 @@
                                                     <input id="update_penerima_sertifikat_admin" name="penerimasertifikat" type="text" class="form-control">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Tanggal Penerbitan Sertifikat</label>
-                                                    <input id="update_tanggal_penerbitan_sertifikat_admin" name="tanggalpenerbitansertifikat" type="text" class="form-control">
+                                                    <!-- <label>Tanggal Penerbitan Sertifikat</label>
+                                                    <input id="update_tanggal_penerbitan_sertifikat_admin" name="tanggalpenerbitansertifikat" type="text" class="form-control"> -->
+                                                    <label for="tanggal">Tanggal Penerbitan Sertifikat</label>
+                                                    <br>
+                                                    <input type="date" id="update_tanggal_penerbitan_sertifikat_admin" name="tanggal">
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Nomor Sertifikat</label>
